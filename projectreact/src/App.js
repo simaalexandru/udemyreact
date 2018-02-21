@@ -3,18 +3,18 @@ import './App.css';
 import Animal from './Animal';
 
 
-class Lion extends Animal {
-  constructor(name, height, color){
-    super(name, height) ; //call parents constructor using super
-    this.color = color;
+class Calculator{
+  static multiply(a,b){
+    return a*b;
   }
 
-  hello(){
-    console.log(`Hi, I'm ${this.name} from Pride Rock`)
+  static add(a,b){
+    return a+b;
   }
 }
 
-let son = new Lion("Simba",  2 , "golden");
-son.hello();
+let a = Calculator.add(5, 7); //calculator - not an object holding data
+                                             // but name that holds methods
+console.log(a);
 
 export default 'App';
