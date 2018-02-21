@@ -3,18 +3,15 @@ import './App.css';
 import Animal from './Animal';
 
 
-class Calculator{
-  static multiply(a,b){
-    return a*b;
-  }
+function Wizard(name, house, pet){
+  this.name = name;
+  this.house = house;
+  this.pet = pet;
 
-  static add(a,b){
-    return a+b;
-  }
+  this.greet = () =>  `I'm ${this.name} from ${this.house}`
+
 }
 
-let a = Calculator.add(5, 7); //calculator - not an object holding data
-                                             // but name that holds methods
-console.log(a);
-
+let harry = new Wizard("Harry Potter", "Gryffindoor" , "Owl");
+console.log(harry.greet());
 export default 'App';
