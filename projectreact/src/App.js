@@ -12,7 +12,14 @@ class Animal{
   }
 }
 
-let king = new Animal("Mufasa", 4.5);
-king.hello();
+class Lion extends Animal {
+  constructor(name, height, color){
+    super(name, height) ; //call parents constructor using super
+    this.color = color;
+  }
+}
+
+let son = new Lion("Simba",  2 , "golden");
+console.log(son);
 
 export default 'App';
