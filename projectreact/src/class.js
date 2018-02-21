@@ -1,6 +1,3 @@
-import React  from 'react';
-import './App.css';
-
 class Animal{
   constructor(name, height){
     this.name = name;
@@ -14,5 +11,3 @@ class Animal{
 
 let king = new Animal("Mufasa", 4.5);
 king.hello();
-
-export default 'App';
