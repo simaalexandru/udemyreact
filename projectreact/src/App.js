@@ -2,14 +2,11 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-let a = new Map();
-let key_1 = "string key";
-let key_2 = {a: 'key '};
-let key_3 = function(){};
-a.set(key_1, 'return value for a string key');
-a.set(key_2, 'return value for an object key');
-a.set(key_3, 'return value for a function key');
+let numArr = [[1, 'one'], [2, 'two'], [3, 'three']];
+let valMap = new Map(numArr);
 
-console.log(a);
+for (let [key, value] of valMap.entries()) {
+  console.log (`${key} points to ${value}`);
+}
 
 export default 'App';
