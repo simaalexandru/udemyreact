@@ -2,20 +2,17 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-let string = 'qwertyuiopasdfghjkldasjndkas';
-let letters = new Map();
-for (let i=0; i<string.length; i++){
-  let letter = string[i];
-  //check if the map has the letter
-  if(!letters.has(letter)){
-     letters.set(letter, 1);
-   }else{
-     letters.set(letter, letters.get(letter) +1);
-   }
+let call = () => {
+  let secret = 'ES6 rocks!';
+  let reveal = () => {
+    console.log(secret);
   }
+  reveal();
+}
 
-console.log(letters);
-//counter to know who took the letter
-//maps prevent from duplicatin keys
+call();
 
+//accesing the secret variable using the reveal method
+//call reveal within the closure
+//call the method (call) to acces secret through reveal()
 export default 'App';
