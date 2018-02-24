@@ -2,13 +2,9 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-let numbers = [4, 6, 7, 8, 8, 16];
-let numSet = new Set(numbers); //creating a set with the values from array
-//console.log(numSet);
-
-for(let element of numSet.values()) {
-  console.log(elemen);
-}
-
+let chars = 'dsakdnajsvdenwidewdjwdewdewedw';
+let charArr = chars.split("");
+let charSet = new Set(charArr);
+console.log(charSet);
 
 export default 'App';
