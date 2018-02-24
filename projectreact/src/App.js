@@ -10,5 +10,6 @@ a.add(5);
 a.add("wohoo");
 a.add({x: 50, y: 200});
 
-console.log(a);
+//console.log(a.size );  //how many elements are in set
+ console.log(a.has(5));
 export default 'App';
