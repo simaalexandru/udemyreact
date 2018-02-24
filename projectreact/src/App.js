@@ -2,19 +2,21 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-let call = () => {
-  let secret = 'ES6 rocks!';
-  let reveal = () => {
-    console.log(secret);
+//function factory
+
+const addSufix = (x) => {
+  const concat = (y) =>  {
+    return y + x;
   }
-  return reveal;
+  return concat;
 }
 
-let unveil = call();
-unveil();
-//the closure still has access to secret variable
+let addNess = addSufix("ness");
+//adding ness to addSufix(), takes that parameter, looks at concat method wich is a closure that remember the environment of addSufix and returns it's own argument of x+y
+console.log(addNess);
 
-//inner function accesing the values in parent scopes
-//lexico scoping = javascript and the program keeps track of a location of variable to know how to be accesed
-
+//creating a function factory that
+//first takes an argument
+//defines the closure
+//returns both arguments concatonated
 export default 'App';
