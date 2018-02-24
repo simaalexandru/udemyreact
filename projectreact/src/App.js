@@ -2,14 +2,13 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-let a = new Set();
-//add values or even objects
-//using the add()
+let numbers = [4, 6, 7, 8, 8, 16];
+let numSet = new Set(numbers); //creating a set with the values from array
+//console.log(numSet);
 
-a.add(5);
-a.add("wohoo");
-a.add({x: 50, y: 200});
+for(let element of numSet.values()) {
+  console.log(elemen);
+}
 
-//console.log(a.size );  //how many elements are in set
- console.log(a.has(5));
+
 export default 'App';
