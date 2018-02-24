@@ -7,12 +7,14 @@ let call = () => {
   let reveal = () => {
     console.log(secret);
   }
-  reveal();
+  return reveal;
 }
 
-call();
+let unveil = call();
+unveil();
+//the closure still has access to secret variable
 
-//accesing the secret variable using the reveal method
-//call reveal within the closure
-//call the method (call) to acces secret through reveal()
+//inner function accesing the values in parent scopes
+//lexico scoping = javascript and the program keeps track of a location of variable to know how to be accesed
+
 export default 'App';
