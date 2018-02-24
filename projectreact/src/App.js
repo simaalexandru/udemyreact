@@ -4,19 +4,14 @@ import Animal from './Animal';
 
 //function factory
 
-const addSufix = (x) => {
-  const concat = (y) =>  {
-    return y + x;
+const product = (x) => {
+  return y => {
+    return y * x;
   }
-  return concat;
 }
 
-let addNess = addSufix("ness");
-//adding ness to addSufix(), takes that parameter, looks at concat method wich is a closure that remember the environment of addSufix and returns it's own argument of x+y
-console.log(addNess);
-
-//creating a function factory that
-//first takes an argument
-//defines the closure
-//returns both arguments concatonated
+//creating a new function with our function factorie (mult5)
+//that makes the function with one parameter and returns our value multiplied by 5
+let mult5 = product(5);
+console.log(mult5(3));  //returning y*x
 export default 'App';
