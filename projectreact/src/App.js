@@ -4,11 +4,9 @@ import Animal from './Animal';
 
 //function factory
 
-const product = (x) => {
-  return y => {
-    return y * x;
-  }
-}
+const product = x =>  y => y * x;
+
+
 
 //creating a new function with our function factorie (mult5)
 //that makes the function with one parameter and returns our value multiplied by 5
