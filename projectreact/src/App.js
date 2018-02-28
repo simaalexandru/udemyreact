@@ -2,14 +2,19 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
-//function factory
-
-const product = x =>  y => y * x;
 
 
+function* letterMaker() {
+   //genetaror has a flow control(allows you to pause and resume)
+   yield 'a';
+   yield 'b';
+   yield 'c';
+}
 
-//creating a new function with our function factorie (mult5)
-//that makes the function with one parameter and returns our value multiplied by 5
-let mult5 = product(5);
-console.log(mult5(3));  //returning y*x
-export default 'App';
+//no use of new keywork when creating instance of a genetator
+let letterGen = letterMaker();
+//.value = accessing the return value
+console.log(letterGen.next().value);
+console.log(letterGen.next().value);
+console.log(letterGen.next().value);
+//accesing the .yield
