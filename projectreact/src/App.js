@@ -2,19 +2,18 @@ import React  from 'react';
 import './App.css';
 import Animal from './Animal';
 
+//keeping track of your customers
+//each time someone walks on the door, the generator will count
 
-
-function* letterMaker() {
-   //genetaror has a flow control(allows you to pause and resume)
-   yield 'a';
-   yield 'b';
-   yield 'c';
+function* countMaker() {
+  let count = 0;
+  while(count < 3){
+    yield count += 1;
+  }
 }
 
-//no use of new keywork when creating instance of a genetator
-let letterGen = letterMaker();
-//.value = accessing the return value
-console.log(letterGen.next().value);
-console.log(letterGen.next().value);
-console.log(letterGen.next().value);
-//accesing the .yield
+let countGen = countMaker();
+console.log(countGen.next().value); //1
+console.log(countGen.next().value); //2
+console.log(countGen.next().value); //3
+console.log(countGen.next().value); //undefined
